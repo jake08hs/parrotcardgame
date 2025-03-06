@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EEF9BF;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 56px;
+    color: #75B79E;
+    margin-top: 40px;
+    margin-bottom: 47px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 28px; 
+    justify-content: center; 
+    max-width: 860px; 
+    margin: 20px auto;
+}
+
+.card {
+    width: 117px;
+    height: 146px;
+    position: relative;
+    border-radius: 5px;
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+/*  verso da carta oculto */
+.verso {
+    transform: rotateY(180deg);
+}
+
+/* quando a carta é virada */
+.virada {
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 100%; 
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 46px;
+    }
+}
